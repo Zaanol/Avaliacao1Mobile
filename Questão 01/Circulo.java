@@ -19,7 +19,8 @@ public class Circulo
     Use a assinatura abaixo como base:
     */
     public Circulo(double raio, String cor) {
-        // escreva aqui sua resposta
+        this.raio = raio;
+        this.cor = cor;
     }
 
     // Métodos de acesso
@@ -27,13 +28,29 @@ public class Circulo
         return raio;
     }
 
+    public void setRaio(double raio) {
+        this.raio = raio;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
     /* (c)
-    Um aluno escreveu o seguinte código para a classe `Circulo`:
-    */
+        Um aluno escreveu o seguinte código para a classe `Circulo`:
+        */
     @Override
     public String toString() {
         return "Circulo [raio=" + raio + ", cor=" + cor + "]";
     }
     // O que a palavra `@Override` indica? Por que ela foi colocada neste método da classe?
-    // Resposta:
+    /* Resposta: A anotação @Override significa que está substituindo o conteúdo de um método com a mesma assinatura da classe pai,
+       nesse caso o método padrão de um objeto. Foi colocado nesta classe para que quando for utilizar o objeto Círculo
+       e utilizar por exemplo o Sout(Circulo), a saída no console seja o retorno deste método, ou a visualização de
+       um mapeamento, que sem a sobreposição do toString, sua sáida fica indentificável, assim customizamos para melhor visualização.
+     */
 }
